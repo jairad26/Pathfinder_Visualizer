@@ -227,21 +227,25 @@ def carve_out_maze(x):
                     x.i = x.i + ranchoice
                     visited.append(x)
                     stack.append(x)
+                    cell.remove("right");
                 elif cell_chosen == "left":
                     push_left(x)
                     x.i = x.i - ranchoice
                     visited.append(x)
                     stack.append(x)
+                    cell.remove("left");
                 elif cell_chosen == "up":
                     push_up(x)
                     x.j = x.j + ranchoice
                     visited.append(x)
                     stack.append(x)
+                    cell.remove("up");
                 elif cell_chosen == "down":
                     push_down(x)
                     x.j = x.j - ranchoice
                     visited.append(x)
                     stack.append(x)
+                    cell.remove("down");
             else:
                 print("wegothere")
                 x = stack.pop()
